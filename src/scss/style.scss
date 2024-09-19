@@ -163,7 +163,11 @@ main {
       position: relative;
       overflow: hidden;
       margin-bottom: 0;
-      height: 100px;
+      max-height: 100px;
+
+      &--visible {
+        overflow: visible;
+      }
 
       &--blur::after {
         content: '';
@@ -197,10 +201,12 @@ main {
   &__info-read-button {
     display: flex;
     align-items: center;
-    margin-left: 20px;
     cursor: pointer;
     position: relative;
     width: 132px;
+    h4 {
+      margin: 20px 0;
+    }
 
     div {
       width: 100%;

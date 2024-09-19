@@ -106,9 +106,8 @@ contentTextButton.addEventListener('click', (event) => {
   event.preventDefault()
 
   const text = document.querySelector('.content__info-text')
-  text.style.overflow = 'visible'
-  text.style.display = 'block'
-  text.style.height = 'auto'
+  text.classList.toggle('content__info-text--visible')
+  text.style.maxHeight = 'none'
   contentTextButton.style.display = 'none'
   text.classList.remove('content__info-text--blur')
 })
