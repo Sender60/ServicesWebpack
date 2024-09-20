@@ -864,7 +864,9 @@ main {
       position: relative;
       overflow: hidden;
       margin-bottom: 0;
-      height: 100px; }
+      max-height: 100px; }
+      .content__info-text--visible {
+        overflow: visible; }
       .content__info-text--blur::after {
         content: '';
         position: absolute;
@@ -885,10 +887,11 @@ main {
   .content__info-read-button {
     display: flex;
     align-items: center;
-    margin-left: 20px;
     cursor: pointer;
     position: relative;
     width: 132px; }
+    .content__info-read-button h4 {
+      margin: 20px 0; }
     .content__info-read-button div {
       width: 100%; }
     .content__info-read-button:hover {
