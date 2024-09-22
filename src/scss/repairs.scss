@@ -1,0 +1,41 @@
+.repairs__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 20px;
+  background-color: var(--backgroung-color);
+  font-weight: bold;
+  box-sizing: border-box;
+  height: 160px;
+}
+
+@media (min-width: 768px) {
+  .repairs__list {
+    display: grid;
+    grid-template-columns: repeat(3, 224px);
+    grid-column-gap: 20px;
+    grid-row-gap: 15px;
+    padding-top: 5px;
+
+    height: 170px;
+    overflow: hidden;
+  }
+}
+
+.repairs__list--visible {
+  height: auto;
+  overflow: visible;
+}
+
+@media (min-width: 1120px) {
+  .repairs__list {
+    grid-template-columns: repeat(4, 240px);
+  }
+}
+
+.repairs__image {
+  margin-left: auto;
+}

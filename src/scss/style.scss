@@ -1,0 +1,100 @@
+@import './normalize.css';
+@import 'node_modules/swiper/swiper.scss';
+@import 'node_modules/swiper/modules/pagination.scss';
+@import './aside.scss';
+@import './brands.scss';
+@import './content.scss';
+@import './header.scss';
+@import './modal.scss';
+@import './repairs.scss';
+@import './prices.scss';
+@import './swiper.scss';
+@import './footer.scss';
+
+@font-face {
+  font-family: 'TT Lakes';
+  src: url('../fonts/TTLakes-Regular.woff');
+}
+
+body {
+  margin: 0;
+  background-color: #f8f8f8;
+  font-family: 'TT Lakes', sans-serif;
+}
+
+.body--modal {
+  overflow: hidden;
+}
+
+:root {
+  --active-color: #41f6d7;
+  --active-color-text: #7e7e82;
+  --focus-color-text: #ff3e79;
+  --border-color: #eaeaea;
+  --backgroung-color: white;
+  --header-height: 88px;
+}
+
+main {
+  font-family: 'TT Lakes', sans-serif;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+address {
+  font-style: normal;
+}
+
+.section {
+  margin-left: 20px;
+}
+
+.container {
+  position: relative;
+}
+
+@media (min-width: 1120px) {
+  .container {
+    margin-left: 320px;
+  }
+}
+
+
+.icon-action:hover img {
+  mask-image: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.6) 100%
+  );
+}
+
+.icon-action:hover span {
+  transition: color 0.3s ease;
+  color: var(--focus-color-text);
+  font-weight: bold;
+}
+
+.logo {
+  margin-right: auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.block__title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 56px;
+  height: 56px;
+  padding: 0px 20px;
+  text-transform: uppercase;
+  background-image: linear-gradient(to right, #f8f8f8 0%, #ffffff 100%);
+}
+

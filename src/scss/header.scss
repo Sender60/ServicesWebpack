@@ -1,0 +1,37 @@
+.header {
+  background-color: var(--backgroung-color);
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 20px;
+
+  &__stick {
+    width: 2px;
+    height: 32px;
+    background-color: var(--border-color);
+
+    &:nth-child(2) {
+      display: none;
+    }
+  }
+
+  &__wrapper {
+    display: none;
+  }
+
+  @media (min-width: 1120px) {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1120px) {
+  .header__wrapper {
+    display: flex;
+    gap: 20px;
+  }
+
+  .header__stick:nth-child(2) {
+    display: block;
+  }
+}

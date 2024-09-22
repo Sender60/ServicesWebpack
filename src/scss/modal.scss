@@ -1,0 +1,75 @@
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.95);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  &__content {
+    height: 100%;
+    width: 440px;
+    background-color: var(--backgroung-color);
+    border-left: 1px solid rgba(219, 255, 245, 0.5);
+    margin-left: auto;
+    box-shadow: 10px 0 52px rgba(14, 24, 80, 0.2);
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  &__close {
+    position: absolute;
+    right: 470px;
+    top: 25px;
+  }
+  &__title {
+    margin: 0;
+    position: relative;
+    margin-bottom: 20px;
+    font-weight: bold;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 417px;
+      width: 3px;
+      height: 40px;
+      background-color: var(--active-color);
+      transform: translateY(-50%);
+      border-radius: 35%;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__submit-button {
+    border: none;
+    background-color: transparent;
+    align-self: flex-end;
+    cursor: pointer;
+  }
+  &__input {
+    border: 1px solid #eaeaea;
+    background-color: transparent;
+    border-radius: 6px;
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    &:focus {
+      outline: none;
+    }
+    &--message {
+      min-height: 100px;
+      resize: none;
+    }
+  }
+  &__link {
+    color: var(--focus-color-text);
+    &:hover {
+      font-weight: bold;
+      color: var(--focus-color-text);
+    }
+  }
+}

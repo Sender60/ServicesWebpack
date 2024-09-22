@@ -1,0 +1,23 @@
+.brand-slider {
+  height: 110px;
+}
+
+.repair-slider {
+  height: 210px;
+}
+
+.price-slider {
+  height: 270px;
+}
+
+.brand-slider__pagination .swiper-pagination-bullet-active,
+.repair-slider__pagination .swiper-pagination-bullet-active,
+.price-slider__pagination .swiper-pagination-bullet-active {
+  background-color: #a2a3a8;
+}
+
+.brand-slider__pagination .swiper-pagination-bullet,
+.repair-slider__pagination .swiper-pagination-bullet,
+.price-slider__pagination .swiper-pagination-bullet {
+  background-color: #c0bfbf;
+}

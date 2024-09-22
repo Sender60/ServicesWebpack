@@ -1,0 +1,21 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  border-top: 1px solid rgba(219, 255, 245, 1);
+  color: var(--active-color-text);
+  padding: 20px;
+}
+
+.footer > * {
+  flex: 1;
+}
+
+.footer a:hover {
+  font-weight: bold;
+}
+
+.footer > *:last-child {
+  text-align: end;
+}

@@ -1,0 +1,125 @@
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 999;
+  cursor: pointer;
+}
+
+.aside--visible {
+  display: block;
+  z-index: 1000;
+}
+
+.aside {
+  display: none;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 320px;
+  height: 100vh;
+  background-color: var(--backgroung-color);
+  border-right: 1px solid var(--border-color);
+  box-shadow: -2px 0 4px rgba(69, 79, 126, 0.02),
+    16px 0 52px rgba(14, 24, 80, 0.2);
+  overflow-y: auto;
+  margin: 0;
+}
+
+.aside.aside--visible {
+  display: block;
+}
+
+@media (min-width: 1120px) {
+  .aside {
+    display: block;
+    box-shadow: none;
+  }
+}
+
+.aside > *:not(.sidebar__header) {
+  margin-left: 20px;
+}
+
+.sidebar__header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 0 20px;
+  height: var(--header-height);
+}
+
+@media (min-width: 1120px) {
+  .sidebar__header-close {
+    display: none;
+  }
+}
+
+.sidebar__main-item {
+  margin: 10px 0;
+  position: relative;
+  width: 90%;
+  a {
+    display: block;
+    padding: 10px;
+  }
+  &--active::after {
+    content: '';
+    position: absolute;
+    top: 18px;
+    left: -21px;
+    width: 6px;
+    height: 28px;
+    background-color: var(--active-color);
+    transform: translateY(-50%);
+    border-radius: 35%;
+  }
+  &:hover {
+    transition: color 0.3s ease;
+    color: var(--focus-color-text);
+  }
+  &--active {
+    color: var(--active-color-text);
+  }
+}
+
+.sidebar__footer {
+  margin: 230px 0 10px 0;
+  &--mail:hover {
+    transition: color 0.2s ease;
+    color: var(--focus-color-text);
+  }
+  &--contact {
+    font-weight: bold;
+    &:hover {
+      transition: color 0.2s ease;
+      color: var(--focus-color-text);
+    }
+  }
+}
+
+.icon-wrapper {
+  display: flex;
+  gap: 15px;
+}
+
+.language-list {
+  display: flex;
+  gap: 5px;
+}
+
+.language-item {
+  margin-top: 20px;
+  cursor: pointer;
+  &:hover {
+    transition: color 0.2s ease;
+    color: var(--focus-color-text);
+  }
+}
+.language-active {
+  color: var(--active-color-text);
+}
